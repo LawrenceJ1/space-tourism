@@ -3,20 +3,28 @@ import "./App.css";
 function App() {
   return (
     <div className="container">
-      <nav className="flex">
-        <h2 className="numbered-title">
-          <span>00</span> Home
-        </h2>
-        <h2 className="numbered-title">
-          <span>01</span> Destination
-        </h2>
-        <h2 className="numbered-title">
-          <span>02</span>Crew
-        </h2>
-        <h2 className="numbered-title">
-          <span>03</span>
-          Technology
-        </h2>
+      <nav>
+        <ul className="flex primary-navigation underline-indicators">
+          <li className="active">
+            <a className="uppercase text-white letter-spacing-2">
+              <span>00</span> Home
+            </a>
+          </li>
+          <li>
+            <a className="uppercase text-white letter-spacing-2">
+              <span>01</span> Destination
+            </a>
+          </li>
+          <li>
+            <a className="uppercase text-white letter-spacing-2">
+              <span>02</span>Crew
+            </a>
+          </li>
+          <a className="uppercase text-white letter-spacing-2">
+            <span>03</span>
+            Technology
+          </a>
+        </ul>
       </nav>
       So, you want to travel to Space Let’s face it; if you want to go to space,
       you might as well genuinely go to outer space and not hover kind of on the
