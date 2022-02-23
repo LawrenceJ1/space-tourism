@@ -1,5 +1,5 @@
 import "./App.css";
-import NavBar from "./NavBar";
+import NavBar from "../NavBar";
 import { Fragment } from "react";
 
 function App() {
