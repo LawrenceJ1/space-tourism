@@ -1,5 +1,5 @@
 import NavBar from "../NavBar";
-import "./Technology.css";
+import "./Technology.module.css";
 
 const Technology = () => {
   return (

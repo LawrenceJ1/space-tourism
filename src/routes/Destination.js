@@ -1,5 +1,5 @@
 import NavBar from "../NavBar";
-import "./Destination.css";
+import "./Destination.module.css";
 
 const Destination = () => {
   return (

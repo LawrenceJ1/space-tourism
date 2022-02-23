@@ -1,10 +1,21 @@
-import "./App.css";
+import styles from "./App.module.css";
 import NavBar from "../NavBar";
-import { Fragment } from "react";
 
 function App() {
   return (
-    <Fragment>
+    <div>
+      <img
+        src="/assets/home/background-home-desktop.jpg"
+        className={styles.bg1}
+      />
+      <img
+        src="/assets/home/background-home-tablet.jpg"
+        className={styles.bg2}
+      />
+      <img
+        src="/assets/home/background-home-mobile.jpg"
+        className={styles.bg3}
+      />
       <NavBar />
       <div className="container">
         So, you want to travel to Space Let’s face it; if you want to go to
@@ -20,7 +31,7 @@ function App() {
           </a>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 }
 

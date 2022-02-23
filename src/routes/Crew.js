@@ -1,5 +1,5 @@
 import NavBar from "../NavBar";
-import "./Crew.css";
+import "./Crew.module.css";
 
 const Crew = () => {
   return (
