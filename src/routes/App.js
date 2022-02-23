@@ -31,6 +31,13 @@ function App() {
           </a>
         </div>
       </div>
+      <div className="number-indicators flex">
+        <a className="ff-serif" aria-selected="true">
+          1
+        </a>
+        <a className="ff-serif">2</a>
+        <a className="ff-serif">3</a>
+      </div>
     </div>
   );
 }
