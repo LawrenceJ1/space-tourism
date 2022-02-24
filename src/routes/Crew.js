@@ -37,7 +37,7 @@ const Crew = () => {
           <span aria-hidden="true">02</span> Meet your crew
         </h1>
 
-        <div className="dot-indicators flex">
+        <div className={"dot-indicators flex " + styles.tabs}>
           {data.crew.map((value, index) => (
             <button
               key={Math.random() * 1000000}
@@ -50,7 +50,7 @@ const Crew = () => {
           ))}
         </div>
 
-        <article>
+        <article className={styles.content}>
           {/* Role */}
           {data.crew.map((value, index) => (
             <h2

@@ -14,6 +14,29 @@
   display: none;
 }
 
+.con {
+  --flow-space: 2rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+
+.con > img {
+  grid-area: image;
+  max-width: 60%;
+  border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
+}
+
+.con > .tabs {
+  grid-area: tabs;
+}
+
+.con > .content {
+  grid-area: content;
+}
+
 @media (max-width: 40em) {
   .bg3 {
     width: 100vw;
@@ -47,6 +70,14 @@
   .bg1 {
     display: none;
   }
+  .con {
+    grid-template-areas:
+      "title"
+      "content"
+      "tabs"
+      "image";
+    padding-bottom: 0;
+  }
 }
 
 @media (min-width: 50em) {
@@ -64,5 +95,16 @@
     margin: 0;
     padding: 0;
     display: block;
+  }
+  .con {
+    justify-items: start;
+    grid-template-areas:
+      ". title title ."
+      ". content image ."
+      ". tabs image .";
+  }
+  .con > img {
+    max-width: 90%;
+    align-self: end;
   }
 }
