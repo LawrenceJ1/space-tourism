@@ -16,7 +16,7 @@ const Destination = () => {
   return (
     <Fragment>
       <NavBar />
-      <main className="container-grid">
+      <main className="grid-container">
         <div className="numbered-title">
           <span>01</span> Pick your destination
           {data.destinations.map((value, index) => (
