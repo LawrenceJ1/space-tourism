@@ -31,10 +31,13 @@ const Destination = () => {
         className={styles.bg3}
       />
       <NavBar />
+
       <main className={"grid-container flow " + styles.con}>
         <h1 className="numbered-title">
           <span aria-hidden="true">01</span> Pick your destination
         </h1>
+
+        {/* Images */}
         {data.destinations.map((value, index) => (
           <img
             src={value.images.png}
@@ -44,7 +47,9 @@ const Destination = () => {
             className={styles.planets}
           />
         ))}
+
         <div className={"underline-indicators flex tab-list " + styles.tabs}>
+          {/* Destination Selector*/}
           {data.destinations.map((value, index) => (
             <button
               key={Math.random() * 1000000}
@@ -60,7 +65,9 @@ const Destination = () => {
             </button>
           ))}
         </div>
+
         <article className={styles.info}>
+          {/* Name */}
           {data.destinations.map((value, index) => (
             <h2
               key={Math.random() * 1000000}
@@ -70,6 +77,7 @@ const Destination = () => {
               {value.name}
             </h2>
           ))}
+          {/* Description */}
           {data.destinations.map((value, index) => (
             <p
               key={Math.random() * 1000000}
@@ -79,6 +87,8 @@ const Destination = () => {
               {value.description}
             </p>
           ))}
+
+          {/* Distance and travel time*/}
           <div className={"flex " + styles.meta}>
             <div>
               <h3 className="text-accent fs-200 uppercase">Avg. distance</h3>

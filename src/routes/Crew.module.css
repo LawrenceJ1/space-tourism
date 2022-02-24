@@ -1,0 +1,68 @@
+.images[data-visible="false"] {
+  display: none;
+}
+
+.role[data-visible="false"] {
+  display: none;
+}
+
+.name[data-visible="false"] {
+  display: none;
+}
+
+.bio[data-visible="false"] {
+  display: none;
+}
+
+@media (max-width: 40em) {
+  .bg3 {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+  .bg2 {
+    display: none;
+  }
+  .bg1 {
+    display: none;
+  }
+}
+
+@media (min-width: 40em) {
+  .bg3 {
+    display: none;
+  }
+  .bg2 {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+  .bg1 {
+    display: none;
+  }
+}
+
+@media (min-width: 50em) {
+  .bg3 {
+    display: none;
+  }
+  .bg2 {
+    display: none;
+  }
+  .bg1 {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+}
