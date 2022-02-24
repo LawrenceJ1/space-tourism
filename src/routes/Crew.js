@@ -50,27 +50,30 @@ const Crew = () => {
           ))}
         </div>
 
-        <article className={styles.content}>
-          {/* Role */}
-          {data.crew.map((value, index) => (
-            <h2
-              key={Math.random() * 1000000}
-              data-visible={index == cur ? "true" : "false"}
-              className={"fs-600 ff-serif uppercase " + styles.role}
-            >
-              {value.role}
-            </h2>
-          ))}
-          {/* Name */}
-          {data.crew.map((value, index) => (
-            <p
-              key={Math.random() * 1000000}
-              data-visible={index == cur ? "true" : "false"}
-              className={"fs-700 uppercase ff-serif " + styles.name}
-            >
-              {value.name}
-            </p>
-          ))}
+        <article className={"flow " + styles.content}>
+          <header className={"flow " + styles.header}>
+            {/* Role */}
+            {data.crew.map((value, index) => (
+              <h2
+                key={Math.random() * 1000000}
+                data-visible={index == cur ? "true" : "false"}
+                className={"fs-600 ff-serif uppercase " + styles.role}
+              >
+                {value.role}
+              </h2>
+            ))}
+            {/* Name */}
+            {data.crew.map((value, index) => (
+              <p
+                key={Math.random() * 1000000}
+                data-visible={index == cur ? "true" : "false"}
+                className={"fs-700 uppercase ff-serif " + styles.name}
+              >
+                {value.name}
+              </p>
+            ))}
+          </header>
+
           {/* Bio */}
           {data.crew.map((value, index) => (
             <p

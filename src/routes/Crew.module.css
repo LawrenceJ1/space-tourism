@@ -2,6 +2,10 @@
   display: none;
 }
 
+.role {
+  color: hsl(var(--clr-white) / 0.5);
+}
+
 .role[data-visible="false"] {
   display: none;
 }
@@ -10,8 +14,16 @@
   display: none;
 }
 
+.bio {
+  color: hsl(var(--clr-light) / 0.5);
+}
+
 .bio[data-visible="false"] {
   display: none;
+}
+
+.header {
+  --flow-space: 0.5rem;
 }
 
 .con {
@@ -104,7 +116,7 @@
       ". tabs image .";
   }
   .con > img {
-    max-width: 90%;
+    max-width: 100%;
     align-self: end;
   }
 }
