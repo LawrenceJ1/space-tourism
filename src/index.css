@@ -144,6 +144,7 @@ select {
   text-align: center;
   place-items: center;
   padding-inline: 1rem;
+  padding-bottom: 4rem;
 }
 
 .grid-container * {
@@ -158,13 +159,6 @@ select {
         1rem,
         1fr
       );
-  }
-  .grid-container > *:first-child {
-    grid-column: 2;
-  }
-
-  .grid-container > *:last-child {
-    grid-column: 3;
   }
 }
 
@@ -265,6 +259,14 @@ select {
   font-size: var(--fs-500);
   text-transform: uppercase;
   letter-spacing: 4.72px;
+  grid-area: title;
+}
+
+@media (min-width: 40em) {
+  .numbered-title {
+    justify-self: start;
+    margin-top: 2rem;
+  }
 }
 
 .numbered-title span {

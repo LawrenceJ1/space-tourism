@@ -53,4 +53,12 @@
     padding-bottom: max(6rem, 20vh);
     align-items: end;
   }
+
+  .con > *:first-child {
+    grid-column: 2;
+  }
+
+  .con > *:last-child {
+    grid-column: 3;
+  }
 }

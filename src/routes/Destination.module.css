@@ -1,3 +1,56 @@
+.con {
+  --flow-space: 2rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+
+.con > img {
+  grid-area: image;
+  max-width: 60%;
+}
+
+.con > .tabs {
+  grid-area: tabs;
+}
+
+.con > .info {
+  grid-area: content;
+}
+
+.meta {
+  flex-direction: column;
+  border-top: 1px solid hsl(var(--clr-white) / 0.1);
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.destinations {
+  background-color: transparent;
+}
+
+.planets[data-visible="false"] {
+  display: none;
+}
+
+.name[data-visible="false"] {
+  display: none;
+}
+
+.description[data-visible="false"] {
+  display: none;
+}
+
+.distance[data-visible="false"] {
+  display: none;
+}
+
+.travel[data-visible="false"] {
+  display: none;
+}
+
 @media (max-width: 40em) {
   .bg3 {
     width: 100vw;
@@ -31,6 +84,10 @@
   .bg1 {
     display: none;
   }
+  .meta {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 @media (min-width: 50em) {
@@ -49,36 +106,22 @@
     padding: 0;
     display: block;
   }
-}
 
-.planets {
-  display: block;
-  margin: 0;
-  padding: 0;
-  width: clamp(50%, 30vw, 100%);
-  height: clamp(50%, 30vw, 100%);
-}
+  .con {
+    justify-items: start;
+    align-items: start;
+    grid-template-areas:
+      ". title title . "
+      ". image tabs ."
+      ". image content .";
+  }
 
-.destinations {
-  background-color: transparent;
-}
+  .con > img {
+    max-width: 90%;
+  }
 
-.planets[data-visible="false"] {
-  display: none;
-}
-
-.name[data-visible="false"] {
-  display: none;
-}
-
-.description[data-visible="false"] {
-  display: none;
-}
-
-.distance[data-visible="false"] {
-  display: none;
-}
-
-.travel[data-visible="false"] {
-  display: none;
+  .meta {
+    --gap: min(6vw, 6rem);
+    justify-content: start;
+  }
 }
