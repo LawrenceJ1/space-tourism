@@ -32,50 +32,52 @@ const Destination = () => {
       />
       <NavBar />
       <main className="grid-container">
-        <div className="numbered-title">
-          <span>01</span> Pick your destination
+        <h1 className="numbered-title">
+          <span aria-hidden="true">01</span> Pick your destination
           {data.destinations.map((value, index) => (
             <img
               src={value.images.png}
               key={Math.random() * 1000000}
+              alt={value.name}
               data-visible={index == cur ? "true" : "false"}
               className={styles.planets}
             />
           ))}
-        </div>
+        </h1>
         <div>
-          <div className="underline-indicators flex">
+          <div className="underline-indicators flex tab-list">
             {data.destinations.map((value, index) => (
-              <span
+              <button
                 key={Math.random() * 1000000}
                 data-index={index}
                 aria-selected={index == cur ? "true" : "false"}
                 className={
-                  "letter-spacing-2 uppercase text-white " + styles.destinations
+                  "letter-spacing-2 uppercase text-accent ff-sans-cond " +
+                  styles.destinations
                 }
                 onClick={clickHandler}
               >
                 {value.name}
-              </span>
+              </button>
             ))}
           </div>
           {data.destinations.map((value, index) => (
-            <h1
+            <h2
               key={Math.random() * 1000000}
               data-visible={index == cur ? "true" : "false"}
               className={"fs-900 ff-serif uppercase " + styles.name}
             >
               {value.name}
-            </h1>
+            </h2>
           ))}
           {data.destinations.map((value, index) => (
-            <p
+            <article
               key={Math.random() * 1000000}
               data-visible={index == cur ? "true" : "false"}
               className={"text-accent " + styles.description}
             >
               {value.description}
-            </p>
+            </article>
           ))}
         </div>
       </main>

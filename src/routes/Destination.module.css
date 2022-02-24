@@ -63,8 +63,8 @@
   display: none;
 }
 
-.destinations[aria-selected="true"] {
-  border-color: hsl(var(--clr-white) / 1);
+.destinations {
+  background-color: transparent;
 }
 
 .name[data-visible="false"] {

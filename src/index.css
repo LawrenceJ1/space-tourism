@@ -427,8 +427,10 @@ select {
   border-color: hsl(var(--clr-white) / 0.5);
 }
 
-.underline-indicators > .active {
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
   border-color: hsl(var(--clr-white) / 1);
+  color: hsl(var(--clr-white) / 1);
 }
 
 .tab-list {
