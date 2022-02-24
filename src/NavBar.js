@@ -37,22 +37,22 @@ const NavBar = () => {
           className="flex primary-navigation underline-indicators"
         >
           <NavLink to="/" className="uppercase text-white letter-spacing-2">
-            <span>00</span>Home
+            <span aria-hidden="true">00</span>Home
           </NavLink>
           <NavLink
             to="/destination"
             className="uppercase text-white letter-spacing-2"
           >
-            <span>01</span>Destination
+            <span aria-hidden="true">01</span>Destination
           </NavLink>
           <NavLink to="/crew" className="uppercase text-white letter-spacing-2">
-            <span>02</span>Crew
+            <span aria-hidden="true">02</span>Crew
           </NavLink>
           <NavLink
             to="/Technology"
             className="uppercase text-white letter-spacing-2"
           >
-            <span>03</span>Technology
+            <span aria-hidden="true">03</span>Technology
           </NavLink>
         </ul>
       </nav>

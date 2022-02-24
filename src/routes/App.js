@@ -18,7 +18,7 @@ function App() {
         className={styles.bg3}
       />
       <NavBar />
-      <div className={"grid-container " + styles.con}>
+      <main className={"grid-container " + styles.con}>
         <div>
           <h1 className="text-accent fs-500 ff-sans-cord uppercase letter-spacing-1">
             So, you want to travel to
@@ -39,7 +39,7 @@ function App() {
             Explore
           </a>
         </div>
-      </div>
+      </main>
     </Fragment>
   );
 }
