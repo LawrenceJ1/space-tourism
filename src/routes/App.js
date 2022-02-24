@@ -7,14 +7,17 @@ function App() {
     <Fragment>
       <img
         src="/assets/home/background-home-desktop.jpg"
+        alt="background"
         className={styles.bg1}
       />
       <img
         src="/assets/home/background-home-tablet.jpg"
+        alt="background"
         className={styles.bg2}
       />
       <img
         src="/assets/home/background-home-mobile.jpg"
+        alt="background"
         className={styles.bg3}
       />
       <NavBar />
