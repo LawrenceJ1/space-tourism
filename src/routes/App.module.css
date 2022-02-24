@@ -1,4 +1,4 @@
-@media (max-width: 600px) {
+@media (max-width: 40em) {
   .bg3 {
     width: 100vw;
     height: 100vh;
@@ -15,7 +15,7 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 40em) {
   .bg3 {
     display: none;
   }
@@ -33,7 +33,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 50em) {
   .bg3 {
     display: none;
   }
@@ -48,5 +48,9 @@
     margin: 0;
     padding: 0;
     display: block;
+  }
+  .con {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
   }
 }

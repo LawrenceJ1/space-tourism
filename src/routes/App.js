@@ -1,9 +1,10 @@
 import styles from "./App.module.css";
 import NavBar from "../NavBar";
+import { Fragment } from "react";
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <img
         src="/assets/home/background-home-desktop.jpg"
         className={styles.bg1}
@@ -17,28 +18,29 @@ function App() {
         className={styles.bg3}
       />
       <NavBar />
-      <div className="container">
-        So, you want to travel to Space Let’s face it; if you want to go to
-        space, you might as well genuinely go to outer space and not hover kind
-        of on the edge of it. Well sit back, and relax because we’ll give you a
-        truly out of this world experience!
-        <div className="flex">
+      <div className={"grid-container " + styles.con}>
+        <div>
+          <h1 className="text-accent fs-500 ff-sans-cord uppercase letter-spacing-1">
+            So, you want to travel to
+            <span className="d-block fs-900 ff-serif text-white">Space</span>
+          </h1>
+          <p>
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </div>
+        <div>
           <a
             href="#"
-            className="large-button bg-white fs-600 text-dark ff-serif uppercase"
+            className="large-button bg-white text-dark ff-serif uppercase"
           >
             Explore
           </a>
         </div>
       </div>
-      <div className="number-indicators flex">
-        <a className="ff-serif" aria-selected="true">
-          1
-        </a>
-        <a className="ff-serif">2</a>
-        <a className="ff-serif">3</a>
-      </div>
-    </div>
+    </Fragment>
   );
 }
 
