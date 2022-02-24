@@ -59,12 +59,12 @@
   height: clamp(50%, 30vw, 100%);
 }
 
-.planets[data-visible="false"] {
-  display: none;
-}
-
 .destinations {
   background-color: transparent;
+}
+
+.planets[data-visible="false"] {
+  display: none;
 }
 
 .name[data-visible="false"] {
@@ -72,5 +72,13 @@
 }
 
 .description[data-visible="false"] {
+  display: none;
+}
+
+.distance[data-visible="false"] {
+  display: none;
+}
+
+.travel[data-visible="false"] {
   display: none;
 }

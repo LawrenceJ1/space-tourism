@@ -65,7 +65,7 @@ const Destination = () => {
             <h2
               key={Math.random() * 1000000}
               data-visible={index == cur ? "true" : "false"}
-              className={"fs-900 ff-serif uppercase " + styles.name}
+              className={"fs-800 ff-serif uppercase " + styles.name}
             >
               {value.name}
             </h2>
@@ -79,6 +79,32 @@ const Destination = () => {
               {value.description}
             </article>
           ))}
+          <div className="flex">
+            <div>
+              <h3 className="text-accent fs-200 uppercase">Avg. distance</h3>
+              {data.destinations.map((value, index) => (
+                <p
+                  key={Math.random() * 1000000}
+                  data-visible={index == cur ? "true" : "false"}
+                  className={"fs-500 ff-serif uppercase " + styles.distance}
+                >
+                  {value.distance}
+                </p>
+              ))}
+            </div>
+            <div>
+              <h3 className="text-accent fs-200 uppercase">Est. travel time</h3>
+              {data.destinations.map((value, index) => (
+                <p
+                  key={Math.random() * 1000000}
+                  data-visible={index == cur ? "true" : "false"}
+                  className={"fs-500 ff-serif uppercase " + styles.travel}
+                >
+                  {value.travel}
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
       </main>
     </Fragment>
