@@ -1,20 +1,18 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import NavBar from "../NavBar";
 import styles from "./Destination.module.css";
 import data from "../data.json";
 
-let list = new Array(data.destinations.length);
-for (let i = 0; i < list.length; i++) {
-  if (i === 0) {
-    list[0] = 1;
-  } else {
-    list[i] = 0;
-  }
-}
-
 const Destination = () => {
-  console.log(data.destinations);
-  console.log(list);
+  const [cur, setCur] = useState(0);
+
+  const clickHandler = (e) => {
+    let selected = e.target.attributes["data-index"].value;
+    if (cur != selected) {
+      setCur(selected);
+    }
+  };
+
   return (
     <Fragment>
       <NavBar />
@@ -25,18 +23,21 @@ const Destination = () => {
             <img
               src={value.images.png}
               key={index}
-              data-visible={list[index]}
+              data-visible={index == cur ? "true" : "false"}
               className={styles.planets}
             />
           ))}
         </div>
-        <div className="underline-indicators">
+        <div className="underline-indicators flex">
           {data.destinations.map((value, index) => (
             <span
               key={index}
               data-index={index}
-              aria-selected={list[index] ? "true" : "false"}
-              className={styles.destinations}
+              aria-selected={index == cur ? "true" : "false"}
+              className={
+                "letter-spacing-2 uppercase text-white " + styles.destinations
+              }
+              onClick={clickHandler}
             >
               {value.name}
             </span>

@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-.planets[data-visible="0"] {
+.planets[data-visible="false"] {
   display: none;
 }
 
