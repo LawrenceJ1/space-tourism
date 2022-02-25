@@ -16,17 +16,17 @@ const Crew = () => {
   return (
     <Fragment>
       <img
-        src="/assets/crew/background-crew-desktop.jpg"
+        src="assets/crew/background-crew-desktop.jpg"
         alt="background"
         className={styles.bg1}
       />
       <img
-        src="/assets/crew/background-crew-tablet.jpg"
+        src="assets/crew/background-crew-tablet.jpg"
         alt="background"
         className={styles.bg2}
       />
       <img
-        src="/assets/crew/background-crew-mobile.jpg"
+        src="assets/crew/background-crew-mobile.jpg"
         alt="background"
         className={styles.bg3}
       />

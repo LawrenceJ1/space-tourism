@@ -16,17 +16,17 @@ const Destination = () => {
   return (
     <Fragment>
       <img
-        src="/assets/destination/background-destination-desktop.jpg"
+        src="assets/destination/background-destination-desktop.jpg"
         alt="background"
         className={styles.bg1}
       />
       <img
-        src="/assets/destination/background-destination-tablet.jpg"
+        src="assets/destination/background-destination-tablet.jpg"
         alt="background"
         className={styles.bg2}
       />
       <img
-        src="/assets/destination/background-destination-mobile.jpg"
+        src="assets/destination/background-destination-mobile.jpg"
         alt="background"
         className={styles.bg3}
       />

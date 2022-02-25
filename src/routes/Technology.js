@@ -16,17 +16,17 @@ const Technology = () => {
   return (
     <Fragment>
       <img
-        src="/assets/technology/background-technology-desktop.jpg"
+        src="assets/technology/background-technology-desktop.jpg"
         alt="background"
         className={styles.bg1}
       />
       <img
-        src="/assets/technology/background-technology-tablet.jpg"
+        src="assets/technology/background-technology-tablet.jpg"
         alt="background"
         className={styles.bg2}
       />
       <img
-        src="/assets/technology/background-technology-mobile.jpg"
+        src="assets/technology/background-technology-mobile.jpg"
         alt="background"
         className={styles.bg3}
       />

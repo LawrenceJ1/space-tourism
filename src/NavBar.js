@@ -16,7 +16,7 @@ const NavBar = () => {
     <header className="flex primary-header">
       <div>
         <img
-          src="/assets/shared/logo.svg"
+          src="assets/shared/logo.svg"
           alt="space tourism logo"
           className="logo"
         />
