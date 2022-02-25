@@ -461,6 +461,8 @@ select {
   border: 0.1em solid hsl(var(--clr-white) / 0.25);
   border-radius: 50%;
   padding: 1em 1.5em;
+  background-color: transparent;
+  color: hsl(var(--clr-white) / 1);
 }
 
 .number-indicators > *:hover,
