@@ -51,10 +51,12 @@
 
 @media (max-width: 40em) {
   .bg3 {
-    width: 100vw;
-    height: 100vh;
     z-index: -1;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
   }
@@ -72,10 +74,12 @@
   }
   .bg2 {
     display: block;
-    width: 100vw;
-    height: 100vh;
     z-index: -1;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
   }
@@ -100,10 +104,12 @@
     display: none;
   }
   .bg1 {
-    width: 100vw;
-    height: 100vh;
     z-index: -1;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     display: block;

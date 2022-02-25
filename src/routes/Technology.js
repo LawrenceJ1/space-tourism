@@ -78,13 +78,22 @@ const Technology = () => {
         </article>
 
         {data.technology.map((value, index) => (
-          <img
-            key={Math.random() * 1000000}
-            src={value.images.landscape}
-            alt={value.name}
-            data-visible={index == cur ? "true" : "false"}
-            className={styles.images}
-          ></img>
+          <Fragment>
+            <img
+              key={Math.random() * 1000000}
+              src={value.images.landscape}
+              alt={value.name}
+              data-visible={index == cur ? "true" : "false"}
+              className={styles.images_landscape}
+            ></img>
+            <img
+              key={Math.random() * 1000000}
+              src={value.images.portrait}
+              alt={value.name}
+              data-visible={index == cur ? "true" : "false"}
+              className={styles.images_portrait}
+            ></img>
+          </Fragment>
         ))}
       </main>
     </Fragment>

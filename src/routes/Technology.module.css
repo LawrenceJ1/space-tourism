@@ -1,4 +1,12 @@
-.images[data-visible="false"] {
+.images_landscape {
+  max-width: 100vw;
+}
+
+.images_landscape[data-visible="false"] {
+  display: none;
+}
+
+.images_portrait {
   display: none;
 }
 
@@ -33,9 +41,12 @@ h2.role {
     "content";
 }
 
+.con > h1 {
+  padding: 2rem 0;
+}
+
 .con > img {
   grid-area: image;
-  max-width: 100vw;
   padding: 2rem 0;
   margin: 0;
 }
@@ -50,10 +61,12 @@ h2.role {
 
 @media (max-width: 40em) {
   .bg3 {
-    width: 100vw;
-    height: 100vh;
     z-index: -1;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
   }
@@ -71,15 +84,20 @@ h2.role {
   }
   .bg2 {
     display: block;
-    width: 100vw;
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
     z-index: -1;
-    position: absolute;
     margin: 0;
     padding: 0;
   }
   .bg1 {
     display: none;
+  }
+  .con > h1 {
+    padding: 2rem;
   }
 }
 
@@ -91,12 +109,45 @@ h2.role {
     display: none;
   }
   .bg1 {
-    width: 100vw;
-    height: 100vh;
     z-index: -1;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     display: block;
+  }
+  .con {
+    justify-items: start;
+    grid-template-areas:
+      ". title title ."
+      ". tabs content image"
+      ". tabs content image";
+    grid-template-columns: minmax(1rem, 1fr) minmax(5rem, 1fr) repeat(
+        2,
+        minmax(0, 40rem)
+      );
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .con > .tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  .images_landscape {
+    display: none;
+  }
+  .images_portrait {
+    max-height: 100%;
+    max-width: 100%;
+    justify-self: end;
+  }
+  .images_portrait[data-visible="true"] {
+    display: block;
+  }
+  .images_portrait[data-visible="false"] {
+    display: none;
   }
 }
