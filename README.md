@@ -19,6 +19,9 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - View each page and be able to toggle between the tabs to see new information
 
+### Screenshot
+![](./Screenshot_20230111_033938.png)
+
 ### Links
 
 - Solution URL: [Github](https://github.com/LawrenceJ1/space-tourism)
